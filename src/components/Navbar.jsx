@@ -6,6 +6,7 @@ import { navLinks } from "../constants";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const [modal, setModal] = useState(false);
 
   return (
     <nav className="w-full flex py-6 justify-between items-center navbar">
