@@ -3,7 +3,7 @@ import { quotes } from "../assets";
 const FeedbackCard = ({ content, name, title, img }) => (
   <div className="flex justify-between flex-col px-10 py-12 rounded-[20px]  max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
     <img src={quotes} alt="double_quotes" className="w-[42.6px] h-[27.6px] object-contain" />
-    <p className="font-poppins font-normal text-[16px] leading-[32.4px] text-white my-10">
+    <p className="font-poppins font-normal text-[37px] leading-[32.4px] text-white my-10">
       {content}
     </p>
 
@@ -17,6 +17,13 @@ const FeedbackCard = ({ content, name, title, img }) => (
           {title}
         </p>
       </div>
+      <div className={`${styles.flexCenter} flex-wrap w-full`}>
+      {clients.map((client) => (
+        <div key={client.id} className={`flex-1 ${styles.flexCenter} sm:min-w-[192px] min-w-[120px] m-5`}>
+          <img src={client.logo} alt="client_logo" className="sm:w-[192px] w-[100px] object-contain" />
+        </div>
+      ))}
+    </div>
     </div>
   </div>
 );
